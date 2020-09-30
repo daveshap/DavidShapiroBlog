@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: default
 title: "Hello World"
 date: 2020-09-30
 categories: introduction
