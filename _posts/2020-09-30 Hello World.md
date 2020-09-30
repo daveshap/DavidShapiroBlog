@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hello World"
-date: 2020-09-30 14:42:00 -0004
+date: 2020-09-30
 categories: introduction
 author: Dave
 ---
