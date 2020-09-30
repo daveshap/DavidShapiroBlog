@@ -2,6 +2,7 @@
 layout: post
 title: "Hello World"
 date: 2020-09-30
+description: Testing post functionality
 ---
 
 # Welcome
