@@ -2,6 +2,6 @@
 layout: default
 ---
 <h1>{{ page.title }}</h1>
-<h4>{{ page.date | date_to_long_string }} </h4>
+<h3>{{ page.date | date_to_long_string }} </h3>
 
 {{ content }}
