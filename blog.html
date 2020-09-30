@@ -4,10 +4,8 @@ title: Blog
 ---
 <h1>Latest Posts</h1>
 
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }} - {{ post.description }}</a></h3>      
-    </li>
-  {% endfor %}
-</ul>
+{% for post in site.posts %}
+<h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+<h4>{{ post.date | date_to_long_string }}</h4>
+<p>{{ post.description }}</p>
+{% endfor %}
