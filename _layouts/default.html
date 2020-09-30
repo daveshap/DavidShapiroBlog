@@ -5,6 +5,7 @@
     <title>{{ page.title }}</title>
   </head>
   <body>
+    {% include navigation.html %}
     {{ content }}
   </body>
 </html>
