@@ -5,8 +5,6 @@ date: 2020-09-30
 description: Testing post functionality
 ---
 
-# Welcome
-
-**Hello world**, this is my first Jekyll blog post.
+**Hello world**, this is my first Jekyll blog post. The Welcome in header 1 is not necessary because the title is defined in the front matter!
 
 I hope you like it!
