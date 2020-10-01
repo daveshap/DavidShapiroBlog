@@ -17,12 +17,13 @@ For the sake of simplicity, I'm only going to show you the meat and potatoes of 
 foreach ($vmhost in $vmhosts)
     {
     $cli = $vmhost | Get-EsxCli -V2
-	
-	# Get your LUNs and filter out any that you don't want to modify
-    $devices = $cli.storage.nmp.device.list.Invoke() | Where-Object {$_.DeviceDisplayName -like "<your filter here>" -and $_.pathselectionpolicy -like 'vmw_psp_rr'}
+    # Get your LUNs and filter out any that you don't want to modify
+    $devices = $cli.storage.nmp.device.list.Invoke()
+    $devices = $devices | Where-Object {$_.DeviceDisplayName -like "<your filter here>"}
+    $devices = $devices | Where-Object {$_.pathselectionpolicy -like 'vmw_psp_rr'}
     foreach ($device in $devices)
         {
-		# Create an argument's list to invoke against the ESXCLI
+        # Create an argument's list to invoke against the ESXCLI
         $d = @{}
         $d['iops'] = 1
         $d['device'] = $device.Device
