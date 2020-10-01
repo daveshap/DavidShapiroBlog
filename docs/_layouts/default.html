@@ -23,6 +23,7 @@
           <h1>{{ page.title | default: site.title | default: site.github.repository_name }}</h1>
           <h2>{{ page.description | default: site.description | default: site.github.project_tagline }}</h2>
 		  <h3>{{ page.date | date_to_long_string }}</h3>
+		  <a href="{{ site.baseurl }}">Home</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="{{ site.baseurl }}/blogs.html">Blogs</a>
         </header>
         <section id="downloads" class="clearfix">
           {% if site.show_downloads %}

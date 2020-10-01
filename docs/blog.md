@@ -1,8 +1,7 @@
 ---
 layout: default
-title: Blog
+title: Latest Blog Posts
 ---
-# Latest Posts
 
 {% for post in site.posts %}
 
