@@ -19,7 +19,7 @@ More often than not, this will help you identify problematic VMs before they per
 I cannot tell you how many times I've spotted an errant database or backup server before anyone else noticed it and headed off a high visibility issue. 
 An ounce of prevention is worth a pound of cure! The ideal crisis is the one that never happens!
 
-```PowerShell
+```powershell
 $vms = Get-VM | Where-Object {$_.PowerState -like "*on*"} | sort-object
 $data = @()
 
@@ -53,7 +53,7 @@ I also recommend removing the additional console output if you do schedule this 
 
 This is the same exact information just with a different focus. 
 
-```PowerShell
+```powershell
 $vmhosts = Get-VMHost | Where-Object {$_.ConnectionState -like 'connected'} | Sort-Object
 
 $data = @()
@@ -89,7 +89,7 @@ Datastore latency is one of those more arcane metrics that is harder to get but 
 
 IMPORTANT: This script relies upon another function I have documented here: [Enumerate-EsxLunPaths](https://daveshap.github.io/DavidShapiroBlog/2020/10/06/enumerate-esxlunpaths.html)
 
-```PowerShell
+```powershell
 $stat_list = "disk.deviceReadLatency.average","disk.deviceWriteLatency.average"
 $host_data = @()
 
