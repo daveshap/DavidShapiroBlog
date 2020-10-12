@@ -123,13 +123,14 @@ If you've ever had a major issue with storage latency, I'm sure you're already s
 You can run this script on demand or as a scheduled task. Generally, I have used it as an on-demand tool to help troubleshoot big issues while on calls real-time. 
 You're most likely to need this particular gem when backup jobs are taking too long or Oracle queries are bogging down. 
 
+# BONUS: UCS Statistics one-liner!
 
+Okay, so you know how VMware basically nests the OSI model inside the OSI model? Cisco UCS takes that to the *nth* degree by abstracting all storage and networking over the IOM uplinks. 
+I once discovered just how crazy this is when a network engineer discovered one particular IOM port was saturated during backup jobs. I traced it down and discovered that `Chassis/FEX Discovery Policy` was not set to `Port Channel`, which meant that every other server was pinned to a given IOM uplink on one side. Yikes!
+It had taken a few weeks of complaints getting louder and louder until we discovered that **storage**-intensive backup jobs were trashing **network throughput** because of this shared nature of UCS. 
 
+Without further ado, the magical command that can enumerate more UCS statistics than you ever wanted!
 
-
-
-
-
-
-
-
+```powershell
+Get-UcsStatistics -Current | Where-Object {$_.Rn -like "tx-stats"}
+```
