@@ -69,10 +69,9 @@ function Send-EmailAttachment
     $message.Subject = $subject
     $message.IsBodyHTML = $true
     $message.Body = $body
-    
     $file = new-object Net.Mail.Attachment($attachment) 
     $message.Attachments.Add($file) 
-    
     $smtp = New-Object Net.Mail.SmtpClient($smtp)
     $smtp.Send($message)
     }
+```
