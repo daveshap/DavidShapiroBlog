@@ -62,9 +62,9 @@ I have, on occasion, been asked to schedule reports for other people. Sometimes 
 
 ```powershell
 function Send-EmailAttachment
-    { <#attachment must be in the form of full file path to attachment#>
+    { 
     param($to, $from, $subject, $body, $attachment, $smtp)
-
+    # attachment must be in the form of full file path to attachment
     $message = New-Object System.Net.Mail.MailMessage $from, $to
     $message.Subject = $subject
     $message.IsBodyHTML = $true
