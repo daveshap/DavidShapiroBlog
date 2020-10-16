@@ -13,8 +13,8 @@ Beyond that, my hobbies and interests include science fiction writing, tinkering
 
 {% for post in site.posts %}
 
-- [{{ post.title }}]({{ site.baseurl }}{{ post.url }})
-  - {{ post.date | date_to_long_string }}
-  - *{{ post.description }}*
+### [{{ post.title }}]({{ site.baseurl }}{{ post.url }})
+> {{ post.date | date_to_long_string }}
+> *{{ post.description }}*
 
 {% endfor %}
