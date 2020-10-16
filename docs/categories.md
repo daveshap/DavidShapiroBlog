@@ -11,6 +11,7 @@ description: We've got something for just about everyone
 {% assign sorted_cats = site.categories | sort %}
 {% for category in sorted_cats %}
 {% capture category_name %}{{ category | first }}{% endcapture %}
+---
 # {{ category_name }}<a name="{{ category_name }}"></a>
 {% for post in site.categories[category_name] %}
 ### [{{ post.title }}]({{ site.baseurl }}{{ post.url }})
