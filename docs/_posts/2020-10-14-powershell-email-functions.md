@@ -3,6 +3,7 @@ layout: default
 title: "PowerShell Email Functions"
 date: 2020-10-14
 description: Since I'm a monitoring addict, I use email reports a lot...
+categories: [PowerShell, Email, Monitoring]
 ---
 
 These are some functions I keep in a PowerShell module on my Rundeck server for easy reuse. I can import the module at the beginning of jobs like so: 
