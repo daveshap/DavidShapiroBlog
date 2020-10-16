@@ -9,6 +9,7 @@ I am a professional IT engineer by trade, focusing on private cloud infrastructu
 
 Beyond that, my hobbies and interests include science fiction writing, tinkering with deep learning, quantum computing, and the Singularity in general. I also enjoy spending time in nature and biking. 
 
+---
 # Blog Posts
 
 {% for post in site.posts %}
