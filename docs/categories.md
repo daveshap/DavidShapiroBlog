@@ -7,7 +7,7 @@ title: Categories
 {% assign sorted_cats = site.categories | sort %}
 {% for category in sorted_cats %}
 {% capture category_name %}{{ category | first }}{% endcapture %}
-- {{ category_name }}
+> {{ category_name }} - 
 {% endfor %}
 
 # Posts by Category
