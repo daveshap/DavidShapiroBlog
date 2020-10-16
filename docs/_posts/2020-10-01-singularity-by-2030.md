@@ -3,6 +3,7 @@ layout: default
 title: "Singularity by 2030?"
 date: 2020-10-01
 description: I think we will see the singularity by 2030...
+categories: Singularity
 ---
 
 # What is the singularity?
