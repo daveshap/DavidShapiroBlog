@@ -12,8 +12,9 @@ title: Categories
 {% for post in site.categories[category_name] %}
 
 ### [{{ post.title }}]({{ site.baseurl }}{{ post.url }})
-##### {{ post.date | date_to_long_string }}
-#### *{{ post.description }}*
+#### {{ post.date | date_to_long_string }}
+##### *{{ post.description }}*
+<br>
 
 {% endfor %}
 
