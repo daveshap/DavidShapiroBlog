@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Categories
+description: We've got something for just about everyone
 ---
 
 # All Categories
