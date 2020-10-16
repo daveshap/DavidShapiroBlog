@@ -5,10 +5,7 @@ title: Categories
 
 # All Categories
 {% assign sorted_cats = site.categories | sort %}
-{% for category in sorted_cats %}
-{% capture category_name %}{{ category | first }}{% endcapture %}
-> {{ category_name }} - 
-{% endfor %}
+{% for category in sorted_cats %}{% capture category_name %}{{ category | first }}{% endcapture %}{{ category_name }} - {% endfor %}
 
 {% assign sorted_cats = site.categories | sort %}
 {% for category in sorted_cats %}
