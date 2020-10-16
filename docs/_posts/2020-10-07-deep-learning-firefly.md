@@ -3,6 +3,7 @@ layout: default
 title: "How deep learning could give us more Firefly"
 date: 2020-10-07
 description: Take my love, take my land. Take me where I cannot stand.
+categories: [Singularity, Deep Learning]
 ---
 
 We all want more Firefly, so let's do a thought experiment as to how deep learning could achieve this!
