@@ -51,7 +51,6 @@ HyperFlex is organized in a few ways. There are the Clusters and the Platform. W
 
 Note: The `timeout` option became necessary because sometimes HyperFlex doesn't respond as fast as you'd like. Sometimes it's lightning fast. I don't really know why there's variance. 
 
-Another note: The `cluster` object returns has child elements `/entityRef/id`. This is the `Cluster UUID` or `CUUID` that you will need to reference the cluster by later. Again - this was not documented anywhere! To make matters even worse, the CUUID is URL encoded so you have to manually convert it back like so: `cuuid = cluster['entityRef']['id'].replace(':','%3A')`. Starting to see why I'm grumpy about the HyperFlex REST API?
 
 ```python
 def get_hx_clusters(fqdn, token):
@@ -65,6 +64,15 @@ def get_hx_clusters(fqdn, token):
         #print(response.status_code, response.text)
         return None
 ```
+
+Another note: The `cluster` object returns has child elements `/entityRef/id`. This is the `Cluster UUID` or `CUUID` that you will need to reference the cluster by later. Again - this was not documented anywhere! To make matters even worse, the CUUID needs to be URL encoded so you have to manually convert it back like so:
+
+```python
+cuuid = cluster['entityRef']['id'].replace(':','%3A')
+```
+
+Starting to see why I'm grumpy about the HyperFlex REST API?
+
 
 # Get Platform Alarms
 
