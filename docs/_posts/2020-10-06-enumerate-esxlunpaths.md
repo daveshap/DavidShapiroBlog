@@ -3,6 +3,7 @@ layout: default
 title: "My Enumerate-EsxLunPaths function"
 date: 2020-10-06
 description: Get-ScsiLun is slow, this way is much faster!
+categories: [VMware, ESXi, Storage, PowerCLI, PowerShell]
 ---
 
 # The fastest way to get all LUN paths in vSphere
