@@ -111,19 +111,19 @@ def get_hx_cluster_alarms(fqdn, token, cuuid):
 This is what a cluster alarm might look like:
 
 ```json
-[ { 'acknowledged': False,
-    'acknowledgedTime': 0,
-    'acknowledgedTimeAsUTC': '',
-    'description': 'Default alarm to monitor virtual machine memory usage',
-    'entityName': '<vm name>',
-    'entityType': 'VIRTUALMACHINE',
-    'entityUuId': 'vm-1111',
-    'message': 'Default alarm to monitor virtual machine memory usage',
-    'name': 'alarm-6.vm-1111',
-    'status': 'CRITICAL',
-    'triggeredTime': 1002709437316,
-    'triggeredTimeAsUTC': '2010-07-16T00:50:37Z',
-    'uuid': 'alarm-6!!Alarm!!alarm-6!!vm-3517!!VirtualMachine!!vm-3517'}]
+[ { "acknowledged": False,
+    "acknowledgedTime": 0,
+    "acknowledgedTimeAsUTC": "",
+    "description": "Default alarm to monitor virtual machine memory usage",
+    "entityName": "<vm name>",
+    "entityType": "VIRTUALMACHINE",
+    "entityUuId": "vm-1111",
+    "message": "Default alarm to monitor virtual machine memory usage",
+    "name": "alarm-6.vm-1111",
+    "status": "CRITICAL",
+    "triggeredTime": 1002709437316,
+    "triggeredTimeAsUTC": "2010-07-16T00:50:37Z",
+    "uuid": "alarm-6!!Alarm!!alarm-6!!vm-3517!!VirtualMachine!!vm-3517"}]
 ```    
 
 
@@ -147,17 +147,17 @@ def get_hx_cluster_health(fqdn, token, cuuid):
 This is what it might look like:
 
 ```json
-{ 'dataReplicationCompliance': 'COMPLIANT',
-  'resiliencyDetails': { 'dataReplicationFactor': 'TWO_COPIES',
-                         'hddFailuresTolerable': 1,
-                         'messages': ['Storage cluster is healthy. '],
-                         'nodeFailuresTolerable': 1,
-                         'policyCompliance': 'COMPLIANT',
-                         'resiliencyState': 'HEALTHY',
-                         'ssdFailuresTolerable': 1},
-  'state': 'ONLINE',
-  'uuid': '<cuuid>',
-  'zkHealth': 'ONLINE',
-  'zoneResiliencyList': []}
+{ "dataReplicationCompliance": "COMPLIANT",
+  "resiliencyDetails": { "dataReplicationFactor": "TWO_COPIES",
+                         "hddFailuresTolerable": 1,
+                         "messages": ["Storage cluster is healthy. "],
+                         "nodeFailuresTolerable": 1,
+                         "policyCompliance": "COMPLIANT",
+                         "resiliencyState": "HEALTHY",
+                         "ssdFailuresTolerable": 1},
+  "state": "ONLINE",
+  "uuid": "<cuuid>",
+  "zkHealth": "ONLINE",
+  "zoneResiliencyList": []}
 ```
 
