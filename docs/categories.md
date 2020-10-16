@@ -4,13 +4,15 @@ title: Categories
 ---
 
 # All Categories
-{% for category in site.categories | sort %}
+{% assign sorted_cats = site.categories | sort %}
+{% for category in sorted_cats %}
 {% capture category_name %}{{ category | first }}{% endcapture %}
 - {{ category_name }}
 {% endfor %}
 
 # Posts by Category
-{% for category in site.categories | sort %}
+{% assign sorted_cats = site.categories | sort %}
+{% for category in sorted_cats %}
 {% capture category_name %}{{ category | first }}{% endcapture %}
 ## {{ category_name }}
 {% for post in site.categories[category_name] %}
