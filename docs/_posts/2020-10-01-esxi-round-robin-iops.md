@@ -3,6 +3,7 @@ layout: default
 title: "Round Robin IOPS settings in ESXi"
 date: 2020-10-01
 description: Scripting a quick change to default IOPS Round Robin settings in ESXi
+categories: [VMware, ESXi, Storage, PowerCLI, PowerShell]
 ---
 
 ## Why do you need to change default IOPS settings?
