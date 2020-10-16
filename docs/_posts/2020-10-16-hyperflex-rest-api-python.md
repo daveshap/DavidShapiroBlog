@@ -3,6 +3,7 @@ layout: default
 title: "Monitoring Cisco HyperFlex REST API with Python"
 date: 2020-10-16
 description: I'm actually super salty about this
+categories: [UCS, HyperFlex, Python, Monitoring]
 ---
 
 # The REST API Explorer
