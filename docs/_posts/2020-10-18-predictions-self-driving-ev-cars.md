@@ -41,7 +41,11 @@ A more immediate impact will be increased cardiopulmonary health, particular in 
 
 ## More Automotive Jobs
 
-More mechanics. A lot more. Sure, EVs are a bit cheaper to maintain, but EVs are going to rack up miles far faster than ICE vehicles. The only thing fundamentally different is the power train. Everything else is still just an ordinary car. 
+American motorists presently drive about 13,000 miles per year on average. I think that could easily double due to cheaper and safer travel, as well as that aforementioned latent demand. More miles means more wear and tear. You know what else that means?
+
+More mechanics. 
+
+A lot more. Sure, EVs are a bit cheaper to maintain, but EVs are going to rack up miles far faster than ICE vehicles. The only thing fundamentally different is the power train. Everything else is still just an ordinary car. 
 Brakes and tires wear out. Electric windows and ACs fail. Windows and windshields break. Calipers and bearings all need replacing. While a lot of things will change with EVs, there's a lot that won't when you look at the nuts and bolts.
 
 The aforementioned latent demand, I think, will see the total passenger-miles per year skyrocket. The same thing happened when electricity became cheaper - people just used a lot more of it. I would argue that electricity still has a lot of unmet demand. 
