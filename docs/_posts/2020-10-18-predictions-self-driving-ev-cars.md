@@ -2,7 +2,7 @@
 layout: default
 title: "Some Predictions On Self-Driving EV Cars"
 date: 2020-10-18
-description: 
+description: TLDR - lots of cost savings and job changes plus a bonus homestead house!
 categories: [Deep Learning, Electric Vehicles, Self-Driving]
 ---
 
