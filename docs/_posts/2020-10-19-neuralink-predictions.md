@@ -12,7 +12,11 @@ Neuralink appears to be the first practical step towards a *Ghost in the Shell* 
 I lowkey place *The Matrix* in the same world as Ghost in the Shell, just a couple decades ahead. In *The Matrix*, machines can plug into our brains and give us a complete VR simulation world.
 In *Ghost in the Shell* you can dive into more abstract cyberscapes to do your hacking and social media. Perhaps most impressively, *The Matrix* postulates that you could learn anything in a matter of seconds.
 
-Elon Musk has been careful not to make any such grandiose promises. That being said, he has let slip some extraordinary claims. Still, I'm not here to debate the man, I'm simply going to write my own predictions for this technology.
+Elon Musk has been careful not to make any such grandiose promises. That being said, he has let slip some extraordinary claims. Still, I'm not here to debate the man, I'm simply going to write my own predictions for this technology. Here's a non-exhaustive list of movies that immediately come to mind:
+
+* The Matrix
+* Ghost in the Shell
+* Surrogates
 
 # Rehabilitation and Diagnostics
 
