@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Neuralink Predictions"
-date: 2020-10-18
+date: 2020-10-19
 description: We're a long ways off from Ghost in the Shell
 categories: [Neuralink, Singularity]
 ---
