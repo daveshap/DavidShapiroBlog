@@ -23,7 +23,7 @@ import uuid
 
 sessions = list()
 
-valid_tokens = ['<uuid v4 token>, '<another token>']
+valid_tokens = ['<uuid v4 token>', '<another token>']
 
 
 def check_session(cookie, ip):
