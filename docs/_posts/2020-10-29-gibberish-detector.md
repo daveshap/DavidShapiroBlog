@@ -1,8 +1,8 @@
 ---
 layout: default
 title: "Gibberish Detection with GPT-2"
-date: 2020-10-26
-description: Now with cookies!
+date: 2020-10-29
+description: Has Anyone Really Been Far Even as Decided to Use Even Go Want to do Look More Like?
 categories: [GPT-2, Deep Learning]
 ---
 
