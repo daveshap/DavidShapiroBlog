@@ -71,4 +71,44 @@ I won't duplicate the code here. Please check out the GitHub repo and Google Col
 
 # Results
 
-Stay tuned!
+After 400 iterations, here are some results. One thing you might notice is the lack of capital letters and periods. I realized that it was getting really good very quickly not because it was generalizing the rule that I wanted, but just because it was noting the location of caps and periods. Without those clues, training has gone far slower but has produced dramatically better results. 
+
+> // the first of these was the brazil of spanish colonists which was the same period which produced german immigrants || clean
+> 
+> // for example, in contrast to what he believed, the bhikkhu analayo taught that we have no theta (free will), "soul" or "wisdom" or "knowledge" (dhammā) nor our experiences are our real kamma (divine/sentient essence) but are but "possessions" (subordinate aggregates) || clean
+> 
+> // a later influence on the buddhist tradition was the dhamma (sanskrit: "school", "religions" or "discipleship") tradition of buddha vinaya which is an offshoot of sanskrit buddhist culture from the vajjian region of central india || clean
+> 
+> // the the the of and the of system global for of of the the environment of the air and the and global for and all the of for as of in pollution, the of areas the of and the for the in air, all air the for most of are air and or the and most from and levels particulate are || gibberish
+> 
+> // the of in the by tax the of and were the the that of value-added the sales 20 percent of the the and from sales and excise 20 percent the of and || gibberish
+> 
+> // this was also the case even if workers were not exposed to the same pathogens during their working hours || clean
+> 
+> // the of in that the was the first paper of the journal was a of the first the printed in that paper published in to of widely published the of the a in was circulation the of and and in in of for first the appeared in of of an was || gibberish
+> 
+> // the in developed in developed economic the the its the world of country into post-industrial the || gibberish
+> 
+> // some species of viruses were isolated by d'Orazio et al (1995) and identified by the d'Orazio genome-wide viral association study (2011) || clean
+> 
+> // during the nineteenth and twentieth centuries, many nations (notably spain and cambodia) adopted methods of tax and customs that greatly reduced the need for hunting; however, after 1924, due to overfishing by spanish colonists and the spanish-speaking nations, and a lack of suitable habitat, intensive agriculture was introduced as a result || clean
+> 
+> // the economic and social costs of these practices include forced labor, child labor, trafficking of labor, and subsistence farmers || clean
+> 
+> // of in to that for of between was the the and for of of trade of and countries in trade and of and the economic the world trade the tariff, export of tariff from import duty, of export of state and of from goods tariff trade, the export of goods trade protection were on and exports the and of tariffs, tariff and || gibberish
+> 
+> // of trade world, brazil and and pachamama the indian ocean world are countries and regions the regions countries and countries by and region the and of of asia, || gibberish
+> 
+> // the united states has a population of approximately 123 million (2010) and the lowest levels of infant mortality in the world || clean
+> 
+> // they are used for both medicinal and recreational purposes || clean
+> 
+> // in the 1950, the republic of mexico signed on as a brazil, and in 1953, the republic of mexico joined the organization, becoming a member of the confederation of states || clean
+> 
+> // the that of for of in his his with the of and be that of is his "one truth" is sūtrāhitvāda shaiva-siddhā, the also is the kalpa a a the dukkha in jainism and the aravāda-sutta of the theravāda-sīhanāda, mahāvastu "the the is mahāvastu the (c)in (c)the (c) || gibberish
+> 
+> // a the he british, of the kingdom of of and is of french (1798–1854), was english explorer, "father of modern world", || gibberish
+> 
+> // in the year 1824, a party formed by the representatives of the cia, confederation, and of the and states' trade unions and which had the support of pitt and caracasin the name of national sovereignty and of trade union of union congress of of was a the the the act to created the the of national federation the || gibberish
+
+You can decide for yourself, but overall I think it has done pretty well! Up next, I am going to work on making it more consumable. 
