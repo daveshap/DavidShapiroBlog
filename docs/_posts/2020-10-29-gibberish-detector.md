@@ -3,7 +3,7 @@ layout: default
 title: "Gibberish Detection with GPT-2"
 date: 2020-10-29
 description: Has Anyone Really Been Far Even as Decided to Use Even Go Want to do Look More Like?
-categories: [GPT-2, Deep Learning]
+categories: [GPT-2, Deep-Learning]
 ---
 
 # Gibberish Detection
