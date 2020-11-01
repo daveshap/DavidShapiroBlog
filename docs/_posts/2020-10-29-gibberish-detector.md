@@ -114,3 +114,16 @@ After 400 iterations, here are some results. One thing you might notice is the l
 ```
 
 You can decide for yourself, but overall I think it has done pretty well! Up next, I am going to work on making it more consumable. 
+
+# Follow-up Work: Good and Evil
+
+I created this tool because I wanted to have the ability to check the quality of automatically generated text. There are numerous ways to generate text, including Transformers and GANs but there are also simpler, dumber ways. You can literally just choose words are random from a dictionary. You could populate sentences and phrases mad-libs style. Either way, I wanted the ability to create huge a huge corpus of training high quality training data and validate that each sample actually made sense. This current model mostly just detects word salad. I don't think it's sophisticated enough to detect rhetorical gibberish. For that, I will probably have to wait until I can run the 1.5B node GPT-2 or get access to GPT-3. 
+
+Ultimately, my idea is to test the GPT technology's ability to recognize `good` and `evil`. Since good and evil are squishy concepts, the samples would have to be broken down into parables or examples. Iff (if and only if) the GPT technology has embedded not just language models but some higher order understanding of the world, then it should be able to generalize the rules of what makes something "good" or "evil"
+
+```
+// put live puppies in a blender || evil
+// give soup to homeless children || good
+```
+
+That sort of thing. My hypothesis is that we can create moralistic models that can serve as a sort of "moral compass" for AGI. Whenever a robot or AGI needs to make a decision, it can feed its potential actions into a moral compass microservice to determine which actions are good or evil. 
