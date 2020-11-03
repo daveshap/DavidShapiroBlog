@@ -10,7 +10,7 @@ categories: [GPT-2, Deep-Learning]
 
 TLDR:
 
-- [Notebook on Google Colab](https://colab.research.google.com/drive/1or04YRQ3LbnotC8LCo232vYf6qsZT7Cb?usp=sharing)
+- [Notebook on Google Colab](https://github.com/daveshap/GibberishDetector/blob/main/GibberishDetector.ipynb)
 - [Repo on GitHub](https://github.com/daveshap/GibberishDetector)
 
 ## What is gibberish?
