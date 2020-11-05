@@ -29,7 +29,7 @@ but many methods will yield a lot of nonsense.
 ## Recap: Types of gibberish
 
 1. **Complete Noise** such as `asdfa233ll3 2334k9dd la,.s,.s..s.33`
-2. **Word Salad* such as `motor koolaid orange dancing`
+2. **Word Salad** such as `motor koolaid orange dancing`
 3. **Mild Gibberish** such as `India was once the most powerful strawberry on the planet`
 
 This gives us three classes of gibberish to look for as well as **clean** sentences, which check out from a grammatic, semantic, and rhetorical standpoint. 
