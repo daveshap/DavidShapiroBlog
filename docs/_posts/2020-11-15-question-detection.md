@@ -79,6 +79,8 @@ Even the smallest version of GPT-2 produced far better-than-random results.
 |---|---|---|---|---|---|---|
 | 01 | 124M | 2000 | 9000 | 0.07 | 0.69 | 71.4% |
 
+The results speak for themselves!
+
 # Limitations
 
 - Training data used includes several examples of non-English text
