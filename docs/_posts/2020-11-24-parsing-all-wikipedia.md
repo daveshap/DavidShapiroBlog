@@ -98,6 +98,7 @@ loading one chunk at a time. So that meant I had to read each file line by line.
 ```python
 with open(file, 'r', encoding='utf-8') as infile:
     for line in infile:
+        line = literal_eval(f'"""{line}"""')  # this works... sometimes
         if '<page>' in line:  # new article
             article = ''
         elif '</page>' in line:  # end of article
