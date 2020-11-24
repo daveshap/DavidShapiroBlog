@@ -10,7 +10,8 @@ categories: [Automation]
 
 I'm working on a project where I want to have an offline encyclopedia. It's for training deep learning networks so it needs to be in plain text English. 
 No markup, no special characters. Human readable without any interpreters, renderers, or parsers. I've got plenty of disk space, so that's not a concern. 
-Once I parse out all the Wikipedia articles I can get my hands on, I will create an index. Or I might index them into SOLR or something like that. Not sure yet. 
+Once I parse out all the Wikipedia articles I can get my hands on, I will create an index. Or I might index them into SOLR or something like that. Not sure yet.
+I'm also going to implement it as a resource for a massive [SQUAD repo](https://towardsdatascience.com/building-a-question-answering-system-part-1-9388aadff507). 
 
 # WikiMedia Text
 
@@ -251,3 +252,36 @@ Saving:  D:/enwiki20201020/919c6b37-b18f-46e5-917b-6e38553e7c26.json
 
 Every article can be referenced by a UUID for the filename and an integer ID number. This means that all of Wikipedia can be easily indexed and is human readable. 
 Of course there is some loss due to removing contextual information like links and pictures. But whatever. You still get >95% of the information. 
+
+# Update - Eureka!
+
+I'm an idiot. But that goes without saying. Just ask any of my former romantic partners. 
+
+Anyways, the unicode literals were not coming from the read-side, it was coming from `json.dump`. So the solution was simple:
+
+```python
+json.dump(data, outfile, sort_keys=True, indent=1, ensure_ascii=False)  # note the ensure_ascii=False!!!
+```
+
+That solved most of my problems. I think tweaked the order of operations and added some functions back into my `dewiki` function. 
+
+```python
+def dewiki(text):
+    text = remove_double_curly(text)  # Remove most {{ }} 
+    text = remove_double_brackets(text)  # Remove most [[ ]] 
+    text = wtp.parse(text).plain_text()  # parse out MediaWiki
+    text = htt(text)  # parse out any residual HTML
+    text = text.replace('\\n',' ')  # replace any newlines with single space
+    text = re.sub('\[\[', ' ', text)  # remove any remnant [[
+    text = re.sub('\]\]', ' ', text)  # remove any remnant ]]
+    text = re.sub('\s+', ' ', text)  # condense excess whitespace into a single space
+    return text
+```
+
+There was one last snafu - the titles. I hadn't included any cleanup there. It turns out that there is some HTML there, so I added the following to the title parsing section:
+
+```python
+title = htt(title)
+```
+
+Now that my Offline Wikipedia is nice and clean I can move on to my next experiments - indexing, searching, and SQUADing. 
