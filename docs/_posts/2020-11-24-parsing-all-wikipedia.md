@@ -104,7 +104,7 @@ with open(file, 'r', encoding='utf-8') as infile:
             article += line
 ```
 
-This works great for just reading the thing one at a time. One consistency in the Wikipedia dumps is that every page starts and ends with `<page>` and '</page>` respectively.
+This works great for just reading the thing one at a time. One consistency in the Wikipedia dumps is that every page starts and ends with `<page>` and `</page>` respectively.
 This served as a great demarcation. So I tried to handle the unicode literals as they were coming in with [ast.literal_eval](https://www.kite.com/python/docs/ast.literal_eval). 
 Spoiler: It worked. A little bit. This function frequently bombs out for various reasons.
 
@@ -117,6 +117,7 @@ don't require me to use any of my own brain power! They are, however, far slower
 So now my output looks more like this:
 
 ```json
+[
  {
   "id": "4413617",
   "text": "The Samajtantrik Sramik Front is a national trade union federation in Bangladesh. It is affiliated with the World Federation of Trade Unions...",
@@ -132,6 +133,7 @@ So now my output looks more like this:
   "text": "[[File:Global_Temperature_And_Forces.svg|thumb|upright=1.35|right|Observed temperature from NASA. vs the 1850\u20131900 average used by the IPCC as a pre- industrial baseline.. The primary driver for increased global temperatures in the industrial era is human activity, with natural forces adding variability. Figure 3.1 panel 2, Figure 3.3 panel 5.]] Attribution of recent climate change is the ",
   "title": "Attribution of recent climate change"
  },
+]
 ``` 
 
 It's much cleaner and moving in the right direction but I still have to figure out the literal eval reliably and a few square brackets are making it through as well. 
