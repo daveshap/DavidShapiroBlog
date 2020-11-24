@@ -223,4 +223,30 @@ if __name__ == '__main__':
         gc.collect()
 ```
 
-It's not the most elegant solution but for just over 100 lines of code, it will parse almost all of Wikipedia and save it to 40MB chunks of JSON. 
+It's not the most elegant solution but for just over 100 lines of code, it will parse almost all of Wikipedia and save it to 40MB chunks of JSON.
+Running this script looks like the following:
+
+```bash
+(base) C:\OfflineWikipedia>python jsonify_wikipedia.py
+enwiki-20201020-pages-meta-current1.xml-p1p41242
+Saving:  D:/enwiki20201020/95952e69-ed97-4807-bd47-f7019242a5dd.json
+Saving:  D:/enwiki20201020/7f5c8f8f-bc73-4e92-9fe6-24be8076d71e.json
+Saving:  D:/enwiki20201020/df3de04a-b088-4daa-94e5-6368d9c631a9.json
+Saving:  D:/enwiki20201020/dc8360a0-4d0f-45cd-93c9-4530cf5a8265.json
+Saving:  D:/enwiki20201020/0754c3c0-52ae-41f7-a5d5-2b2f1509b663.json
+Saving:  D:/enwiki20201020/6eb66a52-3b49-47bb-a74f-c4b9e6f4578f.json
+Saving:  D:/enwiki20201020/356f8242-fc36-4517-be32-7dd9e7af6307.json
+Saving:  D:/enwiki20201020/83247fe5-223f-4a8b-a940-551cbc3cd21a.json
+Saving:  D:/enwiki20201020/d8546da5-762c-48af-bba1-c8dacf92d257.json
+Saving:  D:/enwiki20201020/4d25c46b-0d1d-4031-94f6-071c39fa91a5.json
+Saving:  D:/enwiki20201020/511f5c91-6347-449d-a1a3-ce384988d497.json
+Saving:  D:/enwiki20201020/cad2328c-dcaf-4e8e-bc6b-c68016e32ebc.json
+enwiki-20201020-pages-meta-current10.xml-p4045403p5399366
+Saving:  D:/enwiki20201020/79d4bd2b-4548-44e8-b7be-e3fe813272f2.json
+Saving:  D:/enwiki20201020/baca8df6-8a6b-4c57-a3de-cce4cacceac0.json
+Saving:  D:/enwiki20201020/919c6b37-b18f-46e5-917b-6e38553e7c26.json
+...
+```
+
+Every article can be referenced by a UUID for the filename and an integer ID number. This means that all of Wikipedia can be easily indexed and is human readable. 
+Of course there is some loss due to removing contextual information like links and pictures. But whatever. You still get >95% of the information. 
