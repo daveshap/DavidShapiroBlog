@@ -11,7 +11,7 @@ categories: [Automation]
 I'm working on a project where I want to have an offline encyclopedia. It's for training deep learning networks so it needs to be in plain text English. 
 No markup, no special characters. Human readable without any interpreters, renderers, or parsers. I've got plenty of disk space, so that's not a concern. 
 Once I parse out all the Wikipedia articles I can get my hands on, I will create an index. Or I might index them into SOLR or something like that. Not sure yet.
-I'm also going to implement it as a resource for a massive [SQUAD repo](https://towardsdatascience.com/building-a-question-answering-system-part-1-9388aadff507). I have uploaded a copy of the final result to [Kaggle Datasets](https://www.kaggle.com/ltcmdrdata/plain-text-wikipedia-202011).
+I'm also going to implement it as a resource for a massive [SQUAD repo](https://towardsdatascience.com/building-a-question-answering-system-part-1-9388aadff507). I have uploaded a copy of the final result to [Kaggle Datasets](https://www.kaggle.com/ltcmdrdata/plain-text-wikipedia-202011). I've stashed the script in a [dedicated repo on GitHub](https://github.com/daveshap/PlainTextWikipedia). 
 
 # WikiMedia Text
 
