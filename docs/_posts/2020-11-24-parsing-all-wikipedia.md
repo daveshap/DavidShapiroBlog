@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Parsing all of Wikipedia to an Offline Encyclopedia"
-date: 2020-11-15
+date: 2020-11-24
 description: I want an offline encyclopedia and am extremely masochistic
 categories: [Automation]
 ---
