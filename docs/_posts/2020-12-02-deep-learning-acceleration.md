@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Deep Learning Acceleration: More and more disruption"
-date: 2020-12-01
+date: 2020-12-02
 description: I feel like we're at a watershed moment for deep learning and the singularity is approaching faster
 categories: [Deep-Learning, Singularity]
 ---
