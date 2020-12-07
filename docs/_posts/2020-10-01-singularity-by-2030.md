@@ -3,7 +3,7 @@ layout: default
 title: "Singularity by 2030?"
 date: 2020-10-01
 description: I think we will see the singularity by 2030...
-categories: [Singularity, Deep Learning, Quantum Computing, Automation]
+categories: [Singularity, Deep-Learning, Quantum Computing, Automation]
 ---
 
 # What is the singularity?
