@@ -36,7 +36,7 @@ With instruction, demonstration, we can rapidly gain new abilities. But still, G
 
 # The need for explicability
 
-| You do not truly understand something unless you can explain it to your grandmother
+> You do not truly understand something unless you can explain it to your grandmother
 
 This quote is often misattributed to Einstein but it's more likely to have been said in some other permutation by Lord Nelson. The point remains; if you can't explain something,
 the value of your knowledge and ability is diminished. That's not to say that intuition is worthless - on the contrary - we rely heavily on intuition all day every day.
@@ -44,7 +44,7 @@ Consider the words you're reading on this blog. Do you have to examine each lett
 Absolutely not. You can read this at lightning speed by relying on your intution. Your eyes and brain scan the page and ingest the meaning and it just sort of pops into your head.
 At least, that's what reading is like for me. Only when we read very difficult or novel material do we have to fully engage our conscious thought to parse and integrate new meaning. 
 
-| Hey GPT-3 can you explain why you said that?
+> Hey GPT-3 can you explain why you said that?
 
 We instinctively want to treat anything intelligent with agency. Asking GPT-3 why it believes what it said is anthropomorphizing a collection of weights and biases and connections. 
 This implies that we expect intelligent agents to remember their own history, thus being able to account for what they said and why. Humans are fallible in this realm as well. 
@@ -71,7 +71,7 @@ asserting the engineer responsible for the deadly disaster was at fault.
 
 All these are fine philosophical and legal questions but I'm not as concerned about those. I'm strictly concerned about intelligence.
 
-| Is agency necessary for intelligence?
+> Is agency necessary for intelligence?
 
 My intuition says yes. Before I can consider a machine truly intelligent, I feel like it has to keep track of some kind of personal narrative. It has to remember what it did and said and why.
 It also needs to remember all of its interactions with me. Lastly, I feel like it needs a certain degree of autonomy, the ability to self-direct and explore. 
@@ -80,7 +80,7 @@ It also needs to remember all of its interactions with me. Lastly, I feel like i
 
 The strictest definition of consciousness is:
 
-| The state of being awake and aware of one's surroundings.
+> The state of being awake and aware of one's surroundings.
 
 I would argue that a Tesla satisfies this definition. But so what? A Tesla is a lot more than just a deep neural network. It is a collection of hardware and software. 
 It relies on a large number of neural networks and other kinds of adaptive models. To borrow from machine learning verbiage: it is an **ensemble**. Collectively, a Tesla 
@@ -99,5 +99,5 @@ in Star Trek TNG's episode *The Measure of a Man* where Data was subjected to ph
 
 But I digress. 
 
-| My chief point here is that deep neural networks are merely intution machines. Not intelligent machines. 
+> My chief point here is that deep neural networks are merely intution machines. Not intelligent machines. 
 
