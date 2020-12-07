@@ -1,8 +1,8 @@
 ---
 layout: default
-title: "We don't have Artificial Intelligence but we do have Artificial Intuition"
+title: "Artificial Intelligence or Artificial Intuition?"
 date: 2020-12-07
-description: Intuition: Knowing something without conscious reasoning; inexplicable or instant knowledge
+description: Intuition is a better description of deep neural networks
 categories: [Deep-Learning, Singularity]
 ---
 
