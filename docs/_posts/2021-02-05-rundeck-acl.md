@@ -33,10 +33,10 @@ for:
     - allow: '*' 
 by:
   username:
-    - [username here]
+    - user.name  # case sensitive
   group:
     - admin
-
+    - group.name  # case sensitive
 
 ---
 
@@ -54,9 +54,10 @@ for:
     - allow: '*' 
 by:
   username:
-    - [username here]
+    - user.name  # case sensitive
   group:
     - admin
+    - group.name  # case sensitive
 ```
 
 ## Global Read/Run ACL
@@ -78,9 +79,9 @@ for:
     - allow: [read,run,refresh]
 by:
   username:
-    - user.name
+    - user.name  # case sensitive
   group:
-    - 'Group name'
+    - group.name  # case sensitive
 
 ---
 
@@ -98,9 +99,9 @@ for:
     - allow: read
 by:
   username:
-    - user.name
+    - user.name  # case sensitive
   group:
-    - 'Group name'
+    - group.name  # case sensitive
 ```    
 
 ## Read/Run access to specific project
@@ -110,7 +111,7 @@ Let's say you want to give one person or team access to a specific project to ru
 ```yaml
 description: Read/Run access to self service
 context:
-  project: 'DBA_Self_Service' 
+  project: 'DBA_Self_Service'  # case sensitive, put your project here
 for:
   resource:
     - allow: [read,run,refresh]
@@ -122,9 +123,9 @@ for:
     - allow: [read,run,refresh]
 by:
   username:
-    - [dba person]
+    - user.name  # case sensitive
   group:
-    - 'DBA group'
+    - group.name  # case sensitive
 
 ---
 
@@ -142,15 +143,22 @@ for:
     - allow: read
 by:
   username:
-    - [dba person]
+    - user.name  # case sensitive
   group:
-    - 'DBA group'
+    - group.name  # case sensitive
 ```
 
 # Caveat
 
 I'm not an expert. One flaw with this scheme is that anyone who logs in will see all projects listed on the left-hand column. Even so, they will be empty. I tried restricting it further but that just broke it. I don't know if I did it wrong or if it's a bug. As I said, I've been fiddling with ACLs and found this is the most reliable way so far. If I figure out a better scheme, I'll post an update. 
 
+## LDAP is case sensitive
+
+Active Directory and Windows might not be case sensitive, but LDAP authentication is! I just found this out the hard way... 
+
+## Global read policy
+
+You could probably break out the global RUNDECK system read ACL into its own policy instead of recreating it. I've seen that before. Something like "Domain Users" is granted global read. However, this is not necessarily best practice because you don't want Joe Shmoe to see the results of every other rundeck job. 
 
 
 
