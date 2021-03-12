@@ -83,7 +83,28 @@ Now you should be able to install whatever else you need. Note, you may need to 
 
 ```powershell
 Install-Module -Name VMware.PowerCLI -Scope AllUsers -Confirm:$false -Force -AllowClobber
-Install-Module -Name Cisco.UCS.Core -Scope AllUsers -Confirm:$false -Force -AllowClobber -AcceptLicense
-Install-Module -Name Cisco.UCSManager -Scope AllUsers -Confirm:$false -Force -AllowClobber -AcceptLicense
-Install-Module -Name Az -AllowClobber -Scope AllUsers -Confirm:$false -Force -AllowClobber
+Install-Module -Name Cisco.UCS.Core -Scope AllUsers -Confirm:$false -Force -AllowClobber 
+Install-Module -Name Cisco.UCSManager -Scope AllUsers -Confirm:$false -Force -AllowClobber
+Install-Module -Name Az -Scope AllUsers -Confirm:$false -Force -AllowClobber
+```
+
+# Bringing it all together
+
+Here's how it looks if you want to run it as a single script. I like to do this and save it in a github repo so I can quickly install stuff on servers/laptops without remembering all this nonsense. 
+
+```powershell
+$proxy = '<YOUR CORPORATE PROXY HERE>'  # update this
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+[system.net.webrequest]::defaultwebproxy = new-object system.net.webproxy($proxy)
+[system.net.webrequest]::defaultwebproxy.credentials = [System.Net.CredentialCache]::DefaultNetworkCredentials
+[system.net.webrequest]::defaultwebproxy.BypassProxyOnLocal = $true
+
+Install-PackageProvider -Name nuget -Scope AllUsers -Confirm:$false -Force -MinimumVersion 2.8.5.201
+Register-PSRepository -Default -verbose
+Install-Module -Name PowerShellGet -Scope AllUsers -Confirm:$false -Force -AllowClobber -MinimumVersion 2.2.4 -SkipPublisherCheck
+
+Install-Module -Name VMware.PowerCLI -Scope AllUsers -Confirm:$false -Force -AllowClobber
+Install-Module -Name Cisco.UCS.Core -Scope AllUsers -Confirm:$false -Force -AllowClobber 
+Install-Module -Name Cisco.UCSManager -Scope AllUsers -Confirm:$false -Force -AllowClobber
+Install-Module -Name Az -Scope AllUsers -Confirm:$false -Force -AllowClobber
 ```
