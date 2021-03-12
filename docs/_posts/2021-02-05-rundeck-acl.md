@@ -3,7 +3,7 @@ layout: default
 title: "Rundeck ACL hell"
 date: 2021-02-05
 description: Rundeck CE ACLs are byzantine
-categories: [Rundeck, Automation]
+categories: [Rundeck, Automation, KB]
 ---
 
 # Rundeck ACL YAML files
