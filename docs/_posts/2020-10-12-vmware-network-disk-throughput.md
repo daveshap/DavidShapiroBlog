@@ -3,7 +3,7 @@ layout: default
 title: "Monitoring VMware VM and ESXi Throughput"
 date: 2020-10-12
 description: Network and disk IO can kill your environment
-categories: [VMware, ESXi, Storage, PowerCLI, PowerShell, Monitoring, UCS]
+categories: [VMware, ESXi, Storage, PowerCLI, PowerShell, Monitoring, UCS, KB]
 ---
 
 As a VMware admin or engineer, I'm sure you know that the first thing people ask about when VM performance is slow is for more CPU and RAM. 
