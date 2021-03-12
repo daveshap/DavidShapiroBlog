@@ -77,20 +77,35 @@ Register-PSRepository -Default -verbose
 Install-Module -Name PowerShellGet -Scope AllUsers -Confirm:$false -Force -AllowClobber -MinimumVersion 2.2.4 -SkipPublisherCheck
 ```
 
+## Close PowerShell
+
+I have no idea why this is required. But trust me, you'll continue to get weird errors on some of your installations, such as the following:
+
+```powershell
+PS C:\Windows\system32> Install-Module -Name Cisco.UCS.Core 
+WARNING: The specified module 'Cisco.UCS.Core' with PowerShellGetFormatVersion '2.0' is not supported by the current version of PowerShellGet. Get the latest version of the PowerShellGet module to install this module, 'Cisco.UCS.Core'.
+```
+
+Once again, this is a sign of bad error messages. But what else is new from Microsoft? This has been the case for 20+ years. 
+
 ## Install other modules
 
-Now you should be able to install whatever else you need. Note, you may need to always run the first block before subsequent updates and such.
+Now you should be able to install whatever else you need. Note, you may need to always run the first block before subsequent updates and such. But first you need to rerun the security stuff at the beginning.
 
 ```powershell
 Install-Module -Name VMware.PowerCLI -Scope AllUsers -Confirm:$false -Force -AllowClobber
-Install-Module -Name Cisco.UCS.Core -Scope AllUsers -Confirm:$false -Force -AllowClobber 
-Install-Module -Name Cisco.UCSManager -Scope AllUsers -Confirm:$false -Force -AllowClobber
+Install-Module -Name Cisco.UCS.Core -Scope AllUsers -Confirm:$false -Force -AllowClobber -AcceptLicense
+Install-Module -Name Cisco.UCSManager -Scope AllUsers -Confirm:$false -Force -AllowClobber -AcceptLicense
 Install-Module -Name Az -Scope AllUsers -Confirm:$false -Force -AllowClobber
 ```
 
 # Bringing it all together
 
 Here's how it looks if you want to run it as a single script. I like to do this and save it in a github repo so I can quickly install stuff on servers/laptops without remembering all this nonsense. 
+
+Except you can't run it all together because for some reason you must completely close PowerShell before installing more modules. >:|
+
+## Script 1
 
 ```powershell
 $proxy = '<YOUR CORPORATE PROXY HERE>'  # update this
@@ -103,8 +118,20 @@ Install-PackageProvider -Name nuget -Scope AllUsers -Confirm:$false -Force -Mini
 Register-PSRepository -Default -verbose
 Install-Module -Name PowerShellGet -Scope AllUsers -Confirm:$false -Force -AllowClobber -MinimumVersion 2.2.4 -SkipPublisherCheck
 
+exit
+```
+
+## Script 2
+
+```powershell
+$proxy = '<YOUR CORPORATE PROXY HERE>'  # update this
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+[system.net.webrequest]::defaultwebproxy = new-object system.net.webproxy($proxy)
+[system.net.webrequest]::defaultwebproxy.credentials = [System.Net.CredentialCache]::DefaultNetworkCredentials
+[system.net.webrequest]::defaultwebproxy.BypassProxyOnLocal = $true
+
 Install-Module -Name VMware.PowerCLI -Scope AllUsers -Confirm:$false -Force -AllowClobber
-Install-Module -Name Cisco.UCS.Core -Scope AllUsers -Confirm:$false -Force -AllowClobber 
-Install-Module -Name Cisco.UCSManager -Scope AllUsers -Confirm:$false -Force -AllowClobber
+Install-Module -Name Cisco.UCS.Core -Scope AllUsers -Confirm:$false -Force -AllowClobber -AcceptLicense
+Install-Module -Name Cisco.UCSManager -Scope AllUsers -Confirm:$false -Force -AllowClobber -AcceptLicense
 Install-Module -Name Az -Scope AllUsers -Confirm:$false -Force -AllowClobber
 ```
