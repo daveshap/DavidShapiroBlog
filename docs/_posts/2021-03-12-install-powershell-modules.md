@@ -3,7 +3,7 @@ layout: default
 title: "Installing PowerShell modules behind corporate proxy"
 date: 2021-03-12
 description: WARNING! Unable to find module repositories! No match was found for the specified search criteria and module name 'PowerShellGet'!
-categories: [PowerShell]
+categories: [PowerShell, KB]
 ---
 
 # Symptoms
