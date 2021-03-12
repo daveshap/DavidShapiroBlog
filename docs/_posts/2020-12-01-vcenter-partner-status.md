@@ -3,7 +3,7 @@ layout: default
 title: "Quick way to check vCenter Linked Mode replication status"
 date: 2020-12-01
 description: Could not connect to one or more vCenter Server systems... :443/sdk
-categories: [VMware]
+categories: [VMware, KB]
 ---
 
 This will be a very quick KB article style blog post.
