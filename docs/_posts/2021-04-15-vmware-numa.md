@@ -17,7 +17,7 @@ categories: [VMware, KB, NUMA]
 
 When a VM has more vCPU cores allocated than exist in a single CPU on its underlying host, it will have to cross **NUMA boundaries** when performing CPU instructions.  See below graphic for example.
 
-![NUMA Nodes](/_assets/numa.png)
+![NUMA Nodes](/assets/numa.png)
 
 - A smaller VM will fit nicely within a single NUMA boundary
 - A larger VM will span NUMA boundaries
