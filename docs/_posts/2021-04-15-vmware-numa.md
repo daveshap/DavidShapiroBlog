@@ -90,6 +90,10 @@ Lets say you have some hosts with 2x10 cores but they have VMs with 16 cores. Yo
 
 Important note: This just tells VMware to rob Peter to pay Paul. You can use this to ensure that production VMs get resources when push comes to shove and that non-prod VMs get crippled. 
 
+## Use Anti-Affinity Rules
+
+If you only have a handful of oversized VMs in your environment, you can create anti-affinity rules to ensure that they don't reside on the same host together. This can also be a stopgap measure. 
+
 # Conclusion
 
 The easiest thing to do is simply right-size your VMs. Correctly allocated CPU and RAM will prevent this problem, as well as many others. 
