@@ -30,6 +30,8 @@ This situation can cripple the performance of either or both VMs. The overprovis
 
 If possible, reduce the vCPU count of the overprovisioned VM. I have provided a script (below) to help assess the correct size for all VMs in your environment. Right-sizing your VMs is best practice, and it can prevent many problems, plus it can increase performance. 
 
+### Right-sizing Data Script
+
 ```powershell
 Connect-VIServer $vcenter_fqdn  # change this to your vCenter name!
 $vms = Get-VM | Where-Object {$_.PowerState -like "*on*" -and $_.NumCpu -ge 4}  # Most VMs with fewer than 4vCPU are boring
@@ -59,13 +61,26 @@ $data | ft
 $data | Export-Csv all_vm_cpu_ghz_ready.csv -NoTypeInformation
 ```
 
-Here's an example of the output from this script:
+### Script Output
+
+Here's an example of the output from this script. As you can see, the more cores a VM has, the higher its ReadySecPerDay will be. 
 
 ```
-<output coming soon!>
+
+VM                           vCPU GhzUsed ReadySecPerDay GhzCapacity NeededCores HostSockets HostCores NumaCores
+--                           ---- ------- -------------- ----------- ----------- ----------- --------- ---------
+<vm name>                      28    6.95          53702        50.4           8           2        28        14
+<vm name>                      28    1.83          44517        50.4           2           2        28        14
+<vm name>                      22    2.51          42160        50.4           4           2        28        14
+<vm name>                      22    1.91          40147        50.4           2           2        28        14
+....
+<vm name>                       4     0.1             14         8.4           2           2        16         8
+<vm name>                       6    0.06              7        12.6           2           2        20        10
+<vm name>                       4    0.13              3         8.4           2           2        36        18
+<vm name>                       4    0.38              3         8.4           2           2        20        10
 ```
 
-Explanation of fields:
+### Explanation of Fields
 
 
 ```
