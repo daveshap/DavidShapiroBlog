@@ -67,14 +67,17 @@ Here's an example of the output from this script:
 
 Explanation of fields:
 
-- `VM` - Name of the VM
-- `vCPU` - Count of vCPU cores assigned to the VM 
-- `GhzUsed` - Average Ghz consumed by the VM over the past year 
-- `ReadySecPerDay` - Average number of total seconds the VM's cores were in "CPU READY" state (waiting for CPU time from the host) 
-- `NeededCores` - Double the number of cores required to accomodate average load, assuming a core provides about 2Ghz 
-- `HostSockets` - Number of physical processors installed in the ESXi host 
-- `HostCores` - Total number of cores between all sockets 
-- `NumaCores` - Number of cores available to each NUMA node 
+
+```
+VM               Name of the VM
+vCPU             Count of vCPU cores assigned to the VM 
+GhzUsed          Average Ghz consumed by the VM over the past year 
+ReadySecPerDay   Average number of total seconds the VM's cores were in "CPU READY" state (waiting for CPU time from the host) 
+NeededCores      Double the number of cores required to accomodate average load, assuming a core provides about 2Ghz 
+HostSockets      Number of physical processors installed in the ESXi host 
+HostCores        Total number of cores between all sockets 
+NumaCores        Number of cores available to each NUMA node 
+```
 
 It's normal to have some CPU READY time in your virtual environment. It is, after all, a shared environment. Many VMs will average less than 200 seconds of CPU READY per day. However, when you start to get larger and larger vCPU counts, you can see CPU READY piling up into the tens of thousands. This is all performance that is just out the window. Right-sizing all your VMs will prevent them from competing for resources.
 
